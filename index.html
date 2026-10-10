@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma & Co. | القهوة المختصة والحلويات</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>☕ توصيل مجاني للطلبات لأكثر من 150 ريال/جنيه</span>
+    <span>•</span>
+    <span>محمصة طازجة يومياً</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">☕</span>
+      <span class="logo-text">أروما <span>.Aroma</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#hero" class="active">الرئيسية</a>
+      <a href="#menu">القائمة</a>
+      <a href="#experience">تجربتنا</a>
+      <a href="#reserve">حجز طاولة</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="cart-btn" id="openCartBtn" aria-label="سلة الشراء">
+        <span>السلة</span>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="tag">Specialty Coffee & Bakery</span>
+      <h1>كل كوب يحكي <br><em>قصة شغف وهدوء.</em></h1>
+      <p>نختار أجوَد حبوب القهوة المقطوفة يدوياً ونحمصها بحرفية، لنقدم لك تجربة استثنائية مع كل رشفة.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">استكشف القائمة ☕</a>
+        <a href="#reserve" class="btn btn-secondary">احجز طاولتك</a>
+      </div>
+    </div>
+    <div class="hero-image-container">
+     <img src="images/​hero-coffee.jpg" alt="قهوة مختصة">
+        <div class="floating-card">
+        <span class="star">★ 4.9</span>
+        <p>أكثر من +5,000 محب للقهوة يسعدون بنا شهرياً</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="section-title">
+      <span class="sub-title">قائمة المشروبات والمخبوزات</span>
+      <h2>اختر مشروبك المفضل اليوم</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-category="all">الكل</button>
+      <button class="tab-btn" data-category="hot">قهوة ساخنة</button>
+      <button class="tab-btn" data-category="cold">مشروبات باردة</button>
+      <button class="tab-btn" data-category="bakery">مخبوزات طازجة</button>
+      <button class="tab-btn" data-category="beans">حبوب قهوة</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Experience / Story Section -->
+  <section class="experience" id="experience">
+    <div class="exp-image">
+   <img src="images/coffee-making.jpg" alt="صناعة القهوة">
+    </div>
+    <div class="exp-content">
+      <span class="tag">جودة لا تساوم</span>
+      <h2>من المحمصة إلى كوبك مباشرةً</h2>
+      <p>نعمل مباشرة مع مزارع القهوة المستدامة في إثيوبيا وكولومبيا للوصول إلى النكهات الأنيقة التي تميز أروما.</p>
+      <ul class="features-list">
+        <li>✨ حبوب قهوة مختصة 100% عالية الجودة.</li>
+        <li>🥐 مخبوزات طازجة تُعد يومياً بحب.</li>
+        <li>🌱 خيارات حليب نباتي متعددة (شوفان، لوز، صويا).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Table Reservation Form -->
+  <section class="reservation" id="reserve">
+    <div class="reserve-card">
+      <h2>احجز جلسة هادئة</h2>
+      <p>اختر وقتك المفضل وسنجهز لك الطاولة والقهوة عند وصولك.</p>
+      <form id="reserveForm" class="reserve-form">
+        <input type="text" placeholder="الاسم بالكامل" required>
+        <input type="tel" placeholder="رقم الهاتف" required>
+        <div class="form-row">
+          <input type="date" required>
+          <input type="time" required>
+        </div>
+        <select required>
+          <option value="" disabled selected>عدد الأشخاص</option>
+          <option value="1">شخص واحد</option>
+          <option value="2">شخصين</option>
+          <option value="4">4 أشخاص</option>
+          <option value="6">مجموعة (6+)</option>
+        </select>
+        <button type="submit" class="btn btn-primary">تأكيد الحجز ✨</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="brand-info">
+        <h3>أروما .Aroma</h3>
+        <p>مساحتك الخاصة للهدوء، والقهوة المصنوعة بحب.</p>
+      </div>
+      <div class="quick-links">
+        <h4>روابط سريعة</h4>
+        <a href="#hero">الرئيسية</a>
+        <a href="#menu">القائمة</a>
+        <a href="#reserve">الحجز</a>
+      </div>
+      <div class="hours">
+        <h4>ساعات العمل</h4>
+        <p>يومياً: 7:00 صباحاً - 11:00 مساءً</p>
+        <p>الجمعة: 1:00 ظهراً - 12:00 منتصف الليل</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 أروما كافيه. تم التطوير بحب وإتقان.</p>
+    </div>
+  </footer>
+
+  <!-- Customization Modal -->
+  <div class="modal-overlay" id="customModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <div class="modal-header">
+        <h3 id="modalTitle">اسم المشروب</h3>
+        <p id="modalPrice">0.00 $</p>
+      </div>
+      <div class="modal-body">
+        <div class="option-group">
+          <label>الحجم:</label>
+          <div class="pill-group" id="sizeOptions">
+            <button class="pill active" data-size="وسط" data-extra="0">وسط</data-size>
+            <button class="pill" data-size="كبير" data-extra="1.5">كبير (+1.5)</button>
+          </div>
+        </div>
+        <div class="option-group">
+          <label>نوع الحليب:</label>
+          <select id="milkOption">
+            <option value="حليب كامل الدسم">حليب كامل الدسم</option>
+            <option value="حليب خالي الدسم">حليب خالي الدسم</option>
+            <option value="حليب شوفان (+1.0)">حليب شوفان (+1.0$)</option>
+            <option value="حليب لوز (+1.0)">حليب لوز (+1.0$)</option>
+          </select>
+        </div>
+        <div class="option-group">
+          <label>درجة السكر:</label>
+          <div class="pill-group" id="sugarOptions">
+            <button class="pill active" data-sugar="بدون سكر">بدون</button>
+            <button class="pill" data-sugar="سكر خفيف">خفيف</button>
+            <button class="pill" data-sugar="مضبوط">مضبوط</button>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="confirmAddBtn">إضافة للسلة 🛒</button>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>سلة طلباتك</h3>
+      <button class="close-modal" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>الإجمالي:</span>
+        <strong id="cartTotal">0.00 $</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">إرسال الطلب ✨</button>
+    </div>
+  </aside>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
